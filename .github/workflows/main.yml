@@ -13,7 +13,7 @@ jobs:
       - name: Create .env file
         run: |
           # Переходим в папку проекта и записываем секрет в .env
-          mkdir ${{vars.DEPLOY_PATH}}/Disk
+          mkdir -p ${{vars.DEPLOY_PATH}}/Disk
           echo "PG_PASS=${{ secrets.MYSQL_PASSWORD }}" > ${{vars.DEPLOY_PATH}}/Disk/.env 
           echo "PG_PASS=${{ secrets.MYSQL_ROOT_PASSWORD }}" >> ${{vars.DEPLOY_PATH}}/Disk/.env 
 
