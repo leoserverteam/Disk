@@ -36,6 +36,8 @@ services:
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
       - REDIS_HOST=redis
+    extra_hosts:
+      - "leonet.site:host-gateway"
 
 volumes:
   nextcloud_data:
